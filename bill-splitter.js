@@ -1,7 +1,6 @@
-"use strict";
 console.log("=== Connect to Split the bill ===")
 
-// access variable to elements
+// declare variable to elements
 const totalAmountInput = document.getElementById("total-amount-to-split");
 const amountPeople = document.getElementById("amount-people");
 const calcBtn = document.getElementById("calc-btn");
@@ -27,28 +26,27 @@ function splitTheBill (amount, people) {
     }
     
     const splitAmount = amount / people;
-    result.textContent = splitAmount.toFixed(2);    //toFixed(2) worked to set max-decimals to 2.
+    result.textContent = splitAmount.toFixed(2);    
 
-
-    // orange underlign if value >= $100
+// orange underlign if value >= $100
     if (splitAmount >= 100) {
         result.style.borderBottom = "2px solid orange";
     } else {
         result.style.borderBottom = "none";
     }
     
-    // "change results div from hidden to block so it can show the result.
+// "change results div from hidden to block so it can show the result.
     resultsDiv.style.display = "block";
-    //add tip calc 
     totalTip = splitAmount * tip;
 }
 
+// Function to display tip amount per person.
 function showTipFunc(){
     showTip.style.display = "block";
     totalPlusTip.textContent = totalTip.toFixed(2);
 
 }
-
+// Event Listeners - Calculate, Yes and No Buttons
 calcBtn.addEventListener("click", splitTheBill);
 yesBtn.addEventListener("click", showTipFunc);
 noBtn.addEventListener("mouseover", () => {
