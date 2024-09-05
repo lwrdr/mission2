@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bill-splitter.css">
+    <script src="bill-splitter.js" defer></script>
+    <title>Split your bills 💸</title>
+</head>
+<body>
+    <h1>BILL SPLITTER 💸</h1>
+    <label for="total-amount-to-split">Total amount:</label>
+    <input id="total-amount-to-split" type="text" placeholder="$">
+    <label for="amount-people">How many people are splitting the bill?</label>
+    <input id="amount-people" type="text" placeholder="Amount of people">
+    <button id="calc-btn">Calculate</button>
+
+    <!-- Total amount div -->
+
+    <div class="results">
+        <h2>Each one will pay $<span id="bill-per-person"></span></h2>
+        <br>
+        <h3>Would you like to add a tip?</h3>
+        <h2 id="show-tip">20% per person $<span id="total-plus-tip"></span></h2>
+        <button id="yes-btn">Yes</button>
+        <button id="no-btn">No</button>
+    </div>
+</body>
+</html>
