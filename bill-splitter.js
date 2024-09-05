@@ -16,7 +16,7 @@ const totalPlusTip = document.getElementById("total-plus-tip")
 const tip = 0.2;
 let totalTip = 0;
 
-
+// function to calc the bill per person
 function splitTheBill (amount, people) {
      amount = parseFloat(totalAmountInput.value);
      people = parseInt(amountPeople.value);
